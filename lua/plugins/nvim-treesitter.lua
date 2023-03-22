@@ -1,6 +1,7 @@
 local plugin = {
 	"nvim-treesitter/nvim-treesitter",
-	build = ":TSUpdate"
+	build = ":TSUpdate",
+	event = "VeryLazy"
 }
 
 plugin.config = function()
@@ -23,6 +24,19 @@ plugin.config = function()
 			"tsx",
 			"typescript",
 			"yaml"
+		},
+		highlight = {
+			enable = true,
+			additional_vim_regex_highlighting = false
+		},
+		incremental_selection = {
+			enable = true,
+			keymaps = {
+				init_selection = '<CR>',
+				node_incremental = '<CR>',
+				node_decremental = '<BS>',
+				scope_incremental = '<TAB>'
+			}
 		}
 	})
 end
