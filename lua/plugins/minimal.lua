@@ -1,6 +1,6 @@
 local plugin = {
 	"Yazeed1s/minimal.nvim",
-	event = "VeryLazy"
+	lazy = false
 }
 
 plugin.config = function()
