@@ -7,9 +7,6 @@ vim.o.swapfile = true
 -- Save undo history
 vim.o.undolevels = 1000
 
--- Faster scrolling
-vim.o.lazyredraw = true
-
 -- Decrease redraw time
 vim.o.redrawtime = 100
 
