@@ -19,6 +19,10 @@ vim.o.tabstop = 4
 -- Number of spaces for a step of indent
 vim.o.shiftwidth = 4
 
+-- Ensure insert final newline
+vim.opt.endofline = true
+vim.opt.fixendofline = true
+
 -- Use ripgrep as grep tool
 vim.o.grepprg = "rg --vimgrep --no-heading"
 vim.o.grepformat = "%f:%l:%c:%m,%f:%l:%m"

@@ -22,12 +22,17 @@ require("lazy").setup("plugins", {
 		lazy = true,
 		version = false
 	},
+	checker = {
+		enabled = true,
+		notify = false,
+	},
+	ui = {
+		border = "rounded",
+	},
 	performance = {
 		rtp = {
 			disabled_plugins = {
 				"gzip",
-				"matchit",
-				"matchparen",
 				"netrwPlugin",
 				"tarPlugin",
 				"tohtml",

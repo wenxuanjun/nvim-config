@@ -33,7 +33,6 @@ return {
 				init_selection = '<CR>',
 				node_incremental = '<CR>',
 				node_decremental = '<BS>',
-				scope_incremental = '<TAB>',
 			},
 		},
 	},
