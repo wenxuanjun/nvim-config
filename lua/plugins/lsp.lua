@@ -23,7 +23,7 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"Saghen/blink.cmp",
 		},
-		event = { "BufReadPre", "BufNewFile" },
+		event = { "VeryLazy" },
 		config = function()
 			require("mason").setup({
 				ui = { border = "rounded" },
