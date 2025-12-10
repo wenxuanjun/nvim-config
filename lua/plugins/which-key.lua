@@ -1,10 +1,4 @@
-local plugin = {
+return {
 	"folke/which-key.nvim",
-	event = "VeryLazy"
+	event = "VeryLazy",
 }
-
-plugin.config = function()
-	require("which-key").setup()
-end
-
-return plugin

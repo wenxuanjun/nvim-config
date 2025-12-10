@@ -1,9 +1,7 @@
-local plugin = {
+return {
 	"github/copilot.vim",
-	event = "VeryLazy"
-}
-
-plugin.config = function()
+	event = "InsertEnter",
+	config = function()
 	vim.g.copilot_filetypes = {
 		["*"] = false,
 		bash = true,
@@ -24,6 +22,5 @@ plugin.config = function()
 		vim = true,
 		yaml = true
 	}
-end
-
-return plugin
+	end,
+}

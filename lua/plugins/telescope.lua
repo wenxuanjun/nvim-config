@@ -1,19 +1,12 @@
-local plugin = {
+return {
 	"nvim-telescope/telescope.nvim",
-	dependencies = {
-		"nvim-lua/plenary.nvim"
-	},
-	event = "VeryLazy"
-}
-
-plugin.config = function()
-	require("telescope").setup({
+	dependencies = { "nvim-lua/plenary.nvim" },
+	event = "VeryLazy",
+	opts = {
 		pickers = {
 			colorscheme = {
-				enable_preview = true
-			}
-		}
-	})
-end
-
-return plugin
+				enable_preview = true,
+			},
+		},
+	},
+}

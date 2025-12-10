@@ -4,6 +4,9 @@ vim.o.hlsearch = true
 -- Use swapfiles
 vim.o.swapfile = true
 
+-- Show line number
+vim.opt.number = true
+
 -- Save undo history
 vim.o.undolevels = 1000
 

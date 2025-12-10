@@ -1,13 +1,17 @@
-local plugin = {
+return {
 	"akinsho/bufferline.nvim",
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
+	event = "VeryLazy",
+	opts = {
+		options = {
+			offsets = {{
+				filetype = "neo-tree",
+				text = "File Explorer",
+				highlight = "Directory",
+				separator = true,
+			}},
+			show_close_icon = true,
+			show_buffer_close_icons = true,
+		},
 	},
-	event = "VeryLazy"
 }
-
-plugin.config = function()
-	require("bufferline").setup()
-end
-
-return plugin

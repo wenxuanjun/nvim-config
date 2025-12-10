@@ -1,11 +1,9 @@
-local plugin = {
+return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	event = "VeryLazy"
-}
-
-plugin.config = function()
-	require("nvim-treesitter.configs").setup({
+	event = "VeryLazy",
+	main = "nvim-treesitter.configs",
+	opts = {
 		ensure_installed = {
 			"bash",
 			"c",
@@ -27,7 +25,7 @@ plugin.config = function()
 		},
 		highlight = {
 			enable = true,
-			additional_vim_regex_highlighting = false
+			additional_vim_regex_highlighting = false,
 		},
 		incremental_selection = {
 			enable = true,
@@ -35,11 +33,8 @@ plugin.config = function()
 				init_selection = '<CR>',
 				node_incremental = '<CR>',
 				node_decremental = '<BS>',
-				scope_incremental = '<TAB>'
-			}
-		}
-	})
-end
-
-return plugin
-
+				scope_incremental = '<TAB>',
+			},
+		},
+	},
+}
