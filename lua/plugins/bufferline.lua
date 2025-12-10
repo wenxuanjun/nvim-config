@@ -12,6 +12,8 @@ return {
 			}},
 			show_close_icon = true,
 			show_buffer_close_icons = true,
+			close_command = function(n) Snacks.bufdelete(n) end,
+			right_mouse_command = function(n) Snacks.bufdelete(n) end,
 		},
 	},
 }
